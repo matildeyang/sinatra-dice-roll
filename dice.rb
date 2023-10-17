@@ -20,13 +20,7 @@ BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
 get("/") do 
   #need to have the back slaces in front and in the href to have quotes within the quote in ruby
-  "<h1> Dice Roll </h1>
-  <ul>
-    <li><a href = \"/dice/2/6\"> Roll two 6-sided dice </a></li>
-    <li><a href = \"/dice/2/10\"> Roll two 10-sided dice </a></li>
-    <li><a href = \"/dice/1/20\"> Roll one 20-sided dice </a></li>
-    <li><a href = \"/die/5/4\"> Roll five 4-sided dice </a></li>
-  </ul>"
+  erb(:elephant)
 end 
 
 get("/dice/2/6") do 
