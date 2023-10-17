@@ -40,3 +40,16 @@ get("/dice/1/20") do
   "<h1> 1d20 </h1>
   <p> #{outcome} </p>"
 end
+
+get("/die/5/4") do 
+  first_die = rand(1..4)
+  second_die = rand(1..4)
+  third_die = rand(1..4)
+  fourth_die = rand(1..4)
+  sum = first_die + second_die + third_die + fourth_die
+
+  outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, and a #{fourth_die} for a total of #{sum}." 
+
+  "<h1> 5d4 </h1>
+  <p> #{outcome} </p>"
+end 
