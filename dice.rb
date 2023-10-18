@@ -70,5 +70,5 @@ get("/dice/100/6") do
     @rolls.push(die)
   end
 
-  erb(:one_hundred_six)
+  erb(:onehundred_six)
 end
